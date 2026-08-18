@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>​🍎​ Minha Despensa</title>
+</head>
+<body>
+
+    <!--Cabecalho-->
+    <header class="cabecalho">
+        <div class="logo-container">
+            <img src="imgs/logo2.png" alt="logo">
+        </div>
+        <div class="usuario">
+             <strong>Olá, SeuNome!</strong> 
+        </div>
+    </header>
+    <main>
+
+        <!--Cards-->
+        <div class="container-cards">
+
+        <div class="card-vencido">
+            <h3>Vencidos</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Produtos</th>
+                    <th>Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Leite</td>
+                    <td>02/04/26</td>
+                </tr>
+                <tr>
+                    <td>Arroz</td>
+                    <td>31/05/26</td>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>30/05/26</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-alerta">
+            <h3>Perto de Vencer</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Produtos</th>
+                    <th>Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Carne</td>
+                    <td>05/06/26</td>
+                </tr>
+                <tr>
+                    <td>Amaciante</td>
+                    <td>07/06/26</td>
+                </tr>
+                <tr>
+                    <td>Tomate</td>
+                    <td>04/06/26</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-valido">
+            <h3>Válido</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Produtos</th>
+                    <th>Data</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Carne</td>
+                    <td>05/06/26</td>
+                </tr>
+                <tr>
+                    <td>Amaciante</td>
+                    <td>07/06/26</td>
+                </tr>
+                <tr>
+                    <td>Tomate</td>
+                    <td>04/06/26</td>
+                </tr>
+                <tr>
+                    <td>Bala</td>
+                    <td>04/08/26</td>
+                </tr>
+                <tr>
+                    <td>Leite</td>
+                    <td>02/04/26</td>
+                </tr>
+                <tr>
+                    <td>Arroz</td>
+                    <td>31/05/26</td>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>30/05/26</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <br>
+
+        <!--Pesquisa-->
+        <h2>Todos os Produtos</h2> <button type="button" class="btn-novo-produto">+ Novo Produto</button>
+        <div class="busca">
+        <input type="search" name="pesquisa" placeholder="Pesquisar produtos...">
+        <!--Filtro-->
+        <select name="filtro" id="filtro">
+            <option value="todos">Filtro </option>
+            <option value="organicos">Orgânicos</option>
+            <option value="inorganicos">Inorgânicos</option>
+            <option value="geladeira">Geladeira</option>
+            <option value="limpeza">Limpeza</option>
+            <option value="congelador">Congelador</option>
+        </select>
+        </div>
+
+        <!--Novo Produto-->
+        <div class="tela-produto-fundo">
+            <div class="tela-produto">
+                <button type="button" class="sair">&times;</button>
+                <h3>Novo Produto</h3>
+                <p>Nome: <input type="text" name="nome" id="nome" placeholder="Digite o nome do produto..."></p>
+                <p>Quantidade: <br><input type="number" name="qtd" id="qtd"></p>
+                <p>Categoria: <select name="categoria" id="categoria">
+                    <option value="" disabled selected></option>
+                    <option value="organicos">Orgânicos</option>
+                    <option value="inorganicos">Inorgânicos</option>
+                    <option value="geladeira">Geladeira</option>
+                    <option value="limpeza">Limpeza</option>
+                    <option value="congelador">Congelador</option>
+                </select></p>
+                <p>Validade: <input type="date" name="validade" id="validade"></p>
+                <br>
+                <div class="botoes">
+                <button type="button" class="btn-cancelar">Cancelar</button>
+                <button type="button" class="btn-salvar">Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Tabela dos itens-->
+        <div class="div-tabela">
+        <table class="tabela-principal">
+            <thead>
+            <tr>
+                <th>Nome do Item</th>
+                <th>Quantidade</th>
+                <th>Validade</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-categoria="geladeira">
+                <td>Leite Moça</td>
+                <td>2</td>
+                <td>02/04/26</td>
+                <td><span class="status">URGENTE</span></td>
+                <td><span class="editar" title="Editar">✏️</span>
+                <span class="excluir" title="Excluir">🗑️</span></td>
+            </tr>
+            <tr data-categoria="organicos">
+                <td>Banana</td>
+                <td>5</td>
+                <td>30/05/26</td>
+                <td><span class="status">URGENTE</span></td>
+                <td><span class="editar" title="Editar">✏️</span>
+                <span class="excluir" title="Excluir">🗑️</span></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        <br><br>
+    </main>
+
+    <!--Rodape-->
+    <footer>
+        Emanuele Ferreira &copy; - 2026
+        <p class="sobre-mim-footer">Para conhecer mais sobre mim <a href="sobremim.html" target="_blank" >clique aqui</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
