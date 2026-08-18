@@ -47,6 +47,11 @@ Não é necessário nenhuma instalação ou servidor. Basta:
 - Boas práticas de organização de código e separação de responsabilidades (criar vs. editar)
 - Estilização de tabelas, modais e elementos customizados com CSS
 
+📌 Próximos passos (melhorias futuras)
+ Mover produtos entre os cards de resumo automaticamente ao editar a validade
+ Página de login/autenticação de usuário
+ Edição de quantidade e categoria refletida também nos cards
+ 
 ---
 
 Desenvolvido por Emanuele Ferreira 💛
