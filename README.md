@@ -52,6 +52,7 @@ Não é necessário nenhuma instalação ou servidor. Basta:
 - [ ] Mover produtos entre os cards de resumo automaticamente ao editar a validade
 - [ ] Edição de quantidade e categoria refletida também nos cards
 - [ ] Página de login/autenticação de usuário
+- [ ] Responsividade para dispositivos móveis
  
 ---
 
